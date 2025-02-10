@@ -45,7 +45,7 @@ const TrendingContent = ({ data }) => {
         >
           <div className="trending-item-info">
             <img
-              src={`/public/events/${data.img}`}
+              src={`/events/${data.img}`}
               draggable={false}
               className="trending-item-img"
             />

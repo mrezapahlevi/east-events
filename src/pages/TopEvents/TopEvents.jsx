@@ -89,7 +89,7 @@ const TopEventsList = ({ data }) => {
         >
           <div className="events-item-info">
             <img
-              src={`/public/events/${data.img}`}
+              src={`/events/${data.img}`}
               draggable={false}
               className="events-item-img"
             />

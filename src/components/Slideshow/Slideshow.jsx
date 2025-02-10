@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./slideshow.css";
 
 function Slideshow() {
-  const images = ["about.jpg", "contact.jpg", "contact2.jpg", "DSC08797.jpg"];
+  const images = ["about.JPG", "contact.JPG", "contact2.JPG", "DSC08797.JPG"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
