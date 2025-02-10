@@ -21,7 +21,7 @@ function TopArtis() {
             ref={(el) => (elRef.current[index] = el)}
             style={{ animationDelay: `${0.09 * index}s` }}
           >
-            <img src="./public/avatar.jpg" draggable={false} />
+            <img src="/avatar.jpg" draggable={false} />
             <p>Artist Name</p>
           </div>
         ))}

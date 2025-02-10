@@ -19,7 +19,7 @@ function Slideshow() {
       {images.map((image, index) => (
         <img
           key={index}
-          src={`./public/${image}`}
+          src={`/${image}`}
           className={`slide ${index === currentIndex ? "active" : ""}`}
         />
       ))}

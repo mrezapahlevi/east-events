@@ -22,7 +22,7 @@ function NavbarPage() {
   return (
     <div id="navbar" className={`${sticky ? "sticky" : ""}`}>
       <div className="logo">
-        <img src="./public/s6.png" />
+        <img src="/s6.png" />
         <p>EVENTS</p>
       </div>
       <div className="menu">

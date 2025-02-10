@@ -2,17 +2,17 @@ export const FEATURED = [
   {
     name: "Pesta Pora 2024",
     location: "Jakarta",
-    img: "./public/events/pestapora.jpeg",
+    img: "/events/pestapora.jpeg",
   },
   {
     name: "Peksa 2024",
     location: "Semarang",
-    img: "./public/events/peksa.jpeg",
+    img: "/events/peksa.jpeg",
   },
   {
     name: "Synchronize 2024",
     location: "JIExpo Jakarta",
-    img: "./public/events/synchronize.jpg",
+    img: "/events/synchronize.jpg",
   },
 ];
 
