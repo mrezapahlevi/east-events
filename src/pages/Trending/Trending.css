@@ -1,0 +1,73 @@
+#trending {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.trending-item {
+  width: 250px;
+  height: 100%;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  /* background-color: var(--secondry-color); */
+  background-image: linear-gradient(45deg, #000, var(--secondry-color));
+  color: #eee;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0);
+  transform: translateX(10%);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.trending-item-info {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
+.trending-item .trending-item-info .trending-item-img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.trending-item .trending-item-info .trending-item-detail {
+  display: none;
+  transition: all 1s ease;
+}
+
+.trending-item:hover {
+  width: 500px;
+}
+.trending-item:hover .trending-item-img {
+  border-radius: 10px 0 0 10px;
+}
+
+.trending-item:hover .trending-item-info .trending-item-detail {
+  display: inline;
+  padding: 10px 0;
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.trending-item:hover .trending-item-info .trending-item-detail h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.trending-item.visible {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.trending-item:first-child {
+  visibility: hidden;
+  cursor: default;
+}
