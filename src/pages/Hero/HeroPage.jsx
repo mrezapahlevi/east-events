@@ -1,7 +1,6 @@
 import Button from "../../components/Button/Button";
 import Slideshow from "../../components/Slideshow/Slideshow";
-import "./hero.css";
-import { IoMdArrowForward } from "react-icons/io";
+import "./Hero.css";
 
 function HeroPage() {
   return (
