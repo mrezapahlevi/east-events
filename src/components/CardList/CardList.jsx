@@ -5,12 +5,11 @@ import "./CardList.css";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { IoMdArrowForward } from "react-icons/io";
 
-function CardList({ children, title, height }) {
+function CardList({ children, title }) {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const scrollRef = useRef(null);
-  const elRef = useIntersectionObserver(0.2);
   const titleRef = useRef(null);
 
   const handleMouseDown = (e) => {
@@ -33,8 +32,31 @@ function CardList({ children, title, height }) {
     setIsDragging(false);
   };
 
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].clientX);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const distance = e.touches[0].clientX - startX;
+    scrollRef.current.scrollLeft = scrollLeft - distance;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  const handleTouchCancel = () => {
+    setIsDragging(false);
+  };
+
   const handleScroll = () => {
     const scrollPosition = scrollRef.current.scrollLeft;
+    if (window.innerWidth <= 600) {
+      return; // Fungsi berhenti jika lebar layar <= 600px
+    }
     // const title = document.getElementById("title");
     if (titleRef.current) {
       //   const opacity = Math.max(0, 1 - scrollPosition / 200);
@@ -47,7 +69,7 @@ function CardList({ children, title, height }) {
   return (
     <div
       className="card-list"
-      style={{ height: `${height ? height + "px" : "350px"}` }}
+      // style={{ height: `${height ? height + "px" : "350px"}` }}
     >
       {title && (
         <div ref={titleRef} id="title" className="title">
@@ -61,6 +83,10 @@ function CardList({ children, title, height }) {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={handleTouchCancel}
         onScroll={handleScroll}
         style={{ cursor: `${isDragging ? "grabbing" : "grab"}` }}
       >

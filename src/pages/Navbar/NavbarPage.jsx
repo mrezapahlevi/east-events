@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./navbar.css";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 function NavbarPage() {
   const [sticky, setSticky] = useState(false);
@@ -32,6 +33,9 @@ function NavbarPage() {
           <li>Blogs</li>
           <li>Contact</li>
         </ul>
+        <div className="hamburger">
+          <RxHamburgerMenu />
+        </div>
       </div>
     </div>
   );

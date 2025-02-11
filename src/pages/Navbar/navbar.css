@@ -45,3 +45,18 @@
   margin-left: 50px;
   cursor: pointer;
 }
+
+.hamburger {
+  display: none;
+}
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+  }
+}

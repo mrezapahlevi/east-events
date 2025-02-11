@@ -21,3 +21,8 @@
   margin: 20px 0;
   font-weight: lighter;
 }
+
+@media (min-width: 320px) {
+  .hero-content h1 {
+  }
+}

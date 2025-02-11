@@ -36,6 +36,7 @@
 
 .scroll-content {
   display: flex;
+  align-items: center;
   cursor: grab;
   height: 100%;
   z-index: 100;
@@ -51,4 +52,30 @@
   cursor: pointer;
   font-size: 20px;
   position: relative;
+}
+@media (max-width: 600px) {
+  .card-list {
+    height: 200px;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  .scroll-container {
+    overflow: auto;
+  }
+
+  .card-list .title {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .card-list .title p {
+    font-size: 1rem;
+  }
 }

@@ -3,13 +3,16 @@
   min-height: 100vh;
 }
 
+#trending .card-list {
+  height: 350px;
+}
+
 .trending-item {
   width: 250px;
   height: 100%;
   margin-right: 15px;
   display: flex;
   align-items: center;
-  /* background-color: var(--secondry-color); */
   background-image: linear-gradient(45deg, #000, var(--secondry-color));
   color: #eee;
   transition: all 0.5s ease;
@@ -70,4 +73,33 @@
 .trending-item:first-child {
   visibility: hidden;
   cursor: default;
+}
+
+@media (max-width: 600px) {
+  #trending {
+    margin-top: 80px;
+  }
+  #trending .card-list {
+    height: 250px;
+  }
+
+  .trending-item {
+    width: 150px;
+  }
+
+  .trending-item:hover {
+    width: 300px;
+  }
+  .trending-item:first-child {
+    display: none;
+  }
+
+  .trending-item .trending-item-info .trending-item-img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 10px;
+  }
 }

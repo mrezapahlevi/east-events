@@ -9,7 +9,7 @@
 
 #categories {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .sliders-container {
@@ -53,4 +53,15 @@
 .slider-track:has(.slideItem:hover) {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+@media (max-width: 600px) {
+  .category-icon {
+    font-size: 10px;
+  }
+
+  .sliders-container {
+    width: 100%;
+    height: 500px;
+  }
 }
