@@ -1,4 +1,3 @@
-import React, { useInsertionEffect } from "react";
 import "./TopEvents.css";
 import Button from "../../components/Button/Button.jsx";
 import { TRENDING } from "../../utils/constant";

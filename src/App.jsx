@@ -1,6 +1,7 @@
 import "./App.css";
 import Categories from "./pages/Categories/Categories";
 import FeaturedPage from "./pages/Featured/FeaturedPage";
+import Footer from "./pages/Footer/Footer";
 import HeroPage from "./pages/Hero/HeroPage";
 import NavbarPage from "./pages/Navbar/NavbarPage";
 import TopArtis from "./pages/TopArtist/TopArtis";
@@ -17,6 +18,7 @@ function App() {
       <TrendingPage />
       <TopArtis />
       <TopEvents />
+      <Footer />
     </div>
   );
 }
