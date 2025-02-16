@@ -55,15 +55,30 @@
 }
 
 .trending-item:hover .trending-item-info .trending-item-detail {
-  display: inline;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-start; */
   padding: 10px 0;
+  padding-right: 10px;
   width: 100%;
   transition: all 1s ease;
 }
 
-.trending-item:hover .trending-item-info .trending-item-detail h1 {
+.trending-item:hover
+  .trending-item-info
+  .trending-item-detail
+  .trending-item-title
+  h1 {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.trending-item:hover .trending-item-info .trending-item-detail button {
+  border: 2px solid var(--secondry-color);
+  height: 50px;
+  border-radius: 30px;
 }
 
 .trending-item.visible {

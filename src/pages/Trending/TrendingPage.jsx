@@ -50,8 +50,11 @@ const TrendingContent = ({ data }) => {
               className="trending-item-img"
             />
             <div className="trending-item-detail" draggable={false}>
-              <h1>{data.name}</h1>
-              <p>Semarang</p>
+              <div className="trending-item-title">
+                <h1>{data.name}</h1>
+                <p>{data.date}</p>
+              </div>
+              <button>See Details</button>
             </div>
           </div>
         </div>
